@@ -2,8 +2,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
 
 / {
     combos {
@@ -58,20 +56,5 @@
 &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-    };
-};
-
-&pointing_listener {
-    scroller {
-        layers = <3>; // レイヤー3のときだけ発動
-        input-processors = <&zip_xy_to_scroll>; 
-    };
-};
-
-/ {
-    zip_xy_to_scroll: zip_xy_to_scroll {
-        compatible = "zmk,input-processor-code";
-        #input-processor-cells = <0>;
-        code = <INPUT_PROCESS_XY_TO_SCROLL>;
     };
 };
