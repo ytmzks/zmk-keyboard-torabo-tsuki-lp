@@ -3,12 +3,7 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &pointing_listener {
-    status = "okay";
-    device = <&pointing_device>;
-
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_xy_to_scroll>;
-
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 };
 
 &size_s_transform {
@@ -21,21 +16,4 @@
 
 &size_l_transform {
     col-offset = <7>;
-};
-
-/ {
-    trackball_scroll_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&pointing_device>; // トラックボールの物理デバイスを直接指定
-
-        layers = <3>; // レイヤー3のときだけ発動
-        evt-type = <INPUT_EV_REL>;
-        
-        /* ⚠️ボールの動き（X/Y軸の移動）を、スクロールホイールの動き（HWHEEL/WHEEL）に直接マッピング */
-        x-code = <INPUT_REL_HWHEEL>; 
-        y-code = <INPUT_REL_WHEEL>;
-        
-        /* スクリプトによる変換ではなく、ZMK標準のマウスバインディングとして処理 */
-        bindings = <&ib_tog_layer 3>; 
-    };
 };
