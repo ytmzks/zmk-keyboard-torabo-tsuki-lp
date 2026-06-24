@@ -17,3 +17,22 @@
 &size_l_transform {
     col-offset = <7>;
 };
+
+/ {
+    /* トラックボールの動き（XY）をスクロール信号に変換するプロセッサ */
+    zip_xy_to_scroll: zip_xy_to_scroll {
+        compatible = "zmk,input-processor-code";
+        #input-processor-cells = <0>;
+        code = <INPUT_PROCESS_XY_TO_SCROLL>;
+    };
+};
+
+/* スニペットによって自動生成されているリスナー（&pointing_listener）の内部に
+   レイヤー3専用の挙動（インプット・ビヘイビア）を直接注入します */
+&pointing_listener {
+    /* 既存の反転に加えて、レイヤー3のときはスクロール化プロセッサを通す設定 */
+    scroller {
+        layers = <3>;
+        input-processors = <&zip_xy_to_scroll>;
+    };
+};
