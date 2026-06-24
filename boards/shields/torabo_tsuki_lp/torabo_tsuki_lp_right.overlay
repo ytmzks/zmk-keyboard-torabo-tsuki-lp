@@ -22,11 +22,20 @@
 &size_l_transform {
     col-offset = <7>;
 };
+
 / {
-    zip_xy_to_scroll: zip_xy_to_scroll {
-        compatible = "zmk,input-processor-code";
-        #input-processor-cells = <0>;
-        layers = <3>; /* ⭐レイヤー3のときだけこの変換処理を実行する */
-        code = <INPUT_PROCESS_XY_TO_SCROLL>;
+    trackball_scroll_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&pointing_device>; // トラックボールの物理デバイスを直接指定
+
+        layers = <3>; // レイヤー3のときだけ発動
+        evt-type = <INPUT_EV_REL>;
+        
+        /* ⚠️ボールの動き（X/Y軸の移動）を、スクロールホイールの動き（HWHEEL/WHEEL）に直接マッピング */
+        x-code = <INPUT_REL_HWHEEL>; 
+        y-code = <INPUT_REL_WHEEL>;
+        
+        /* スクリプトによる変換ではなく、ZMK標準のマウスバインディングとして処理 */
+        bindings = <&ib_tog_layer 3>; 
     };
 };
