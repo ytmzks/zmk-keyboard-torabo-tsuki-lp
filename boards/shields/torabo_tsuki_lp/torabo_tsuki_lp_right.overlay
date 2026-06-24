@@ -3,7 +3,12 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &pointing_listener {
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+    status = "okay";
+    device = <&pointing_device>;
+
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_xy_to_scroll>;
+
 };
 
 &size_s_transform {
@@ -16,4 +21,12 @@
 
 &size_l_transform {
     col-offset = <7>;
+};
+/ {
+    zip_xy_to_scroll: zip_xy_to_scroll {
+        compatible = "zmk,input-processor-code";
+        #input-processor-cells = <0>;
+        layers = <3>; /* ⭐レイヤー3のときだけこの変換処理を実行する */
+        code = <INPUT_PROCESS_XY_TO_SCROLL>;
+    };
 };
