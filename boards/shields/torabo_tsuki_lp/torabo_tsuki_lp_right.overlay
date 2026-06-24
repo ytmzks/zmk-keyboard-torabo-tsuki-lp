@@ -17,28 +17,3 @@
 &size_l_transform {
     col-offset = <7>;
 };
-
-{
-    /* トラックボールの動き（XY）をスクロール信号に変換するプロセッサ */
-    zip_xy_to_scroll: zip_xy_to_scroll {
-        compatible = "zmk,input-processor-code";
-        #input-processor-cells = <0>;
-        code = <INPUT_PROCESS_XY_TO_SCROLL>;
-    };
-
-    /* レイヤー3のときだけ上記の変換を発動させるリスナー */
-    layer3_scroll_listener {
-        compatible = "zmk,input-behavior-listener";
-        
-        /* 大元のトラックボールデバイスを指定します */
-        device = <&pointing_device>; 
-
-        layers = <3>;          // レイヤー3が有効なときだけ動作
-        evt-type = <INPUT_EV_REL>;
-        x-code = <INPUT_REL_X>;
-        y-code = <INPUT_REL_Y>;
-        
-        // レイヤー3のときは、反転された後の信号をさらにスクロールへと変換します
-        bindings = <&zip_xy_to_scroll>;
-    };
-};
