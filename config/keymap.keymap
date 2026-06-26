@@ -51,8 +51,8 @@
             bindings = <
 &trans  &trans  &trans   &trans  &trans  &trans                  &trans            &trans            &trans           &trans  &trans  &trans
 &trans  &trans  &kp F12  &kp F7  &kp F8  &kp F9                  &trans            &trans            &trans           &trans  &trans  &trans
-&trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans  &kp PAGE_DOWN     &msc MOVE_Y(40)   &kp PAGE_UP      &trans  &trans  &trans
-&trans  &trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans  &msc MOVE_X(-40)  &msc MOVE_Y(-40)  &msc MOVE_X(40)  &trans  &trans  &trans
+&trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans  &kp PAGE_DOWN     &msc MOVE_Y(80)   &kp PAGE_UP      &trans  &trans  &trans
+&trans  &trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans  &msc MOVE_X(-80)  &msc MOVE_Y(-80)  &msc MOVE_X(80)  &trans  &trans  &trans
 &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans            &trans            &trans           &trans  &trans  &trans
             >;
         };
