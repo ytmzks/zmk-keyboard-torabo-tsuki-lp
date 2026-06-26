@@ -39,11 +39,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans            &trans             &trans     &trans                                          &trans    &trans         &trans       &trans  &trans  &trans
-&trans  &kp AT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET  &kp NON_US_BACKSLASH                            &trans    &kp PAGE_DOWN  &kp PAGE_UP  &trans  &trans  &trans
-&trans  &trans  &trans            &trans             &trans     &trans                &trans   &trans           &mkp MB5  &mkp MB1       &mkp MB2     &trans  &trans  &trans
-&trans  &trans  &trans            &trans             &trans     &trans                &kp ESC  &kp PRINTSCREEN  &mkp MB4  &mkp MB3       &trans       &trans  &trans  &trans
-&trans  &trans  &trans            &trans             &trans     &trans                &trans   &trans           &trans    &trans         &trans       &trans  &trans  &trans
+&trans  &trans  &trans            &trans             &trans     &trans                               &trans    &trans         &trans       &trans  &trans  &trans
+&trans  &kp AT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp CARET  &kp UNDER                            &trans    &kp PAGE_DOWN  &kp PAGE_UP  &trans  &trans  &trans
+&trans  &trans  &trans            &trans             &trans     &trans     &trans   &trans           &mkp MB5  &mkp MB1       &mkp MB2     &trans  &trans  &trans
+&trans  &trans  &trans            &trans             &trans     &trans     &kp ESC  &kp PRINTSCREEN  &mkp MB4  &mkp MB3       &trans       &trans  &trans  &trans
+&trans  &trans  &trans            &trans             &trans     &trans     &trans   &trans           &trans    &trans         &trans       &trans  &trans  &trans
             >;
         };
 
