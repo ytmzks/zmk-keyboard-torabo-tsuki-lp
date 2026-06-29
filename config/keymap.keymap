@@ -60,7 +60,7 @@
         smaller-dpi {
             bindings = <
 &trans  &trans             &trans             &trans         &trans    &trans                             &trans    &trans         &trans       &trans  &trans  &trans
-&trans  &kp AT_SIGN        &kp RIGHT_BRACKET  &kp BACKSLASH  &kp PLUS  &kp INT1                           &trans    &kp PAGE_DOWN  &kp PAGE_UP  &trans  &trans  &trans
+&trans  &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp BACKSLASH  &kp PLUS  &kp INT1                           &trans    &kp PAGE_DOWN  &kp PAGE_UP  &trans  &trans  &trans
 &trans  &kp LS(SEMICOLON)  &trans             &trans         &trans    &trans    &trans  &trans           &mkp MB5  &mkp MB1       &mkp MB2     &trans  &trans  &trans
 &trans  &trans             &trans             &trans         &trans    &trans    &trans  &kp PRINTSCREEN  &mkp MB4  &mkp MB3       &trans       &trans  &trans  &trans
 &trans  &trans             &trans             &trans         &trans    &trans    &trans  &trans           &trans    &trans         &trans       &trans  &trans  &trans
