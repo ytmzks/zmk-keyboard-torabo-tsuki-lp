@@ -42,7 +42,7 @@
 &trans  &trans            &trans             &trans         &trans    &trans                              &trans           &trans         &trans       &trans           &trans  &trans
 &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp PLUS  &kp INT1                            &kp LC(LS(TAB))  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(TAB)      &trans  &trans
 &trans  &kp ASTERISK      &trans             &trans         &trans    &trans    &trans   &trans           &mkp MB5         &mkp MB1       &mkp MB2     &lt 4 LC(LS(T))  &trans  &trans
-&trans  &trans            &trans             &trans         &trans    &trans    &kp ESC  &kp PRINTSCREEN  &mkp MB4         &mkp MB3       &kp LC(R)    &trans           &trans  &trans
+&trans  &trans            &trans             &trans         &trans    &trans    &kp ESC  &kp PRINTSCREEN  &mkp MB4         &mkp MB3       &kp LC(R)    &kp LC(W)        &trans  &trans
 &trans  &trans            &trans             &trans         &trans    &trans    &trans   &trans           &trans           &trans         &trans       &trans           &trans  &trans
             >;
         };
