@@ -49,25 +49,35 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans   &trans  &trans  &trans                  &trans            &trans            &trans           &trans  &trans  &trans
-&trans  &trans  &kp F12  &kp F7  &kp F8  &kp F9                  &trans            &trans            &trans           &trans  &trans  &trans
-&trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans  &trans  &kp PAGE_DOWN     &msc MOVE_Y(60)   &kp PAGE_UP      &trans  &trans  &trans
-&trans  &trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans  &msc MOVE_X(-60)  &msc MOVE_Y(-60)  &msc MOVE_X(60)  &trans  &trans  &trans
-&trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans            &trans            &trans           &trans  &trans  &trans
+&trans  &trans  &trans   &trans  &trans  &trans                      &trans            &trans            &trans           &trans  &trans  &trans
+&trans  &trans  &kp F12  &kp F7  &kp F8  &kp F9                      &trans            &trans            &trans           &trans  &trans  &trans
+&trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans      &trans  &kp PAGE_DOWN     &msc MOVE_Y(60)   &kp PAGE_UP      &trans  &trans  &trans
+&trans  &trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp ESCAPE  &trans  &msc MOVE_X(-60)  &msc MOVE_Y(-60)  &msc MOVE_X(60)  &trans  &trans  &trans
+&trans  &trans  &trans   &trans  &trans  &trans  &trans      &trans  &trans            &trans            &trans           &trans  &trans  &trans
             >;
         };
 
         smaller-dpi {
             bindings = <
-&trans  &trans            &trans             &trans         &trans    &trans                                 &trans           &trans         &trans       &trans       &trans  &trans
-&trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp PLUS  &kp INT1                               &kp LS(LC(TAB))  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(TAB)  &trans  &trans
-&trans  &kp ASTERISK      &trans             &trans         &trans    &trans    &trans      &trans           &mkp MB5         &mkp MB1       &mkp MB2     &trans       &trans  &trans
-&trans  &trans            &trans             &trans         &trans    &trans    &kp ESCAPE  &kp PRINTSCREEN  &mkp MB4         &mkp MB3       &kp LC(R)    &trans       &trans  &trans
-&trans  &trans            &trans             &trans         &trans    &trans    &trans      &trans           &trans           &trans         &trans       &trans       &trans  &trans
+&trans  &trans            &trans     &trans        &trans        &trans                                    &trans           &trans         &trans       &trans       &trans  &trans
+&trans  &kp LS(APOS)      &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                              &kp LS(LC(TAB))  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(TAB)  &trans  &trans
+&trans  &kp SINGLE_QUOTE  &kp COLON  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans     &trans           &mkp MB5         &mkp MB1       &mkp MB2     &trans       &trans  &trans
+&trans  &kp EQUAL         &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp GRAVE  &kp PRINTSCREEN  &mkp MB4         &mkp MB3       &kp LC(R)    &kp LC(W)    &trans  &trans
+&trans  &trans            &trans     &kp NUMBER_0  &trans        &trans        &trans     &trans           &trans           &trans         &trans       &trans       &trans  &trans
             >;
         };
 
         layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_6 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
